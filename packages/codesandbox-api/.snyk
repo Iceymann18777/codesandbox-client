@@ -1,0 +1,29 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - coveralls > request > hawk > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+    - coveralls > request > hawk > boom > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+    - coveralls > request > hawk > sntp > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+    - semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+    - semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > boom > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+    - semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > sntp > hoek:
+        patched: '2022-02-11T12:28:42.810Z'
+  SNYK-JS-LODASH-567746:
+    - commitizen > lodash:
+        patched: '2022-02-11T12:28:42.810Z'
+  'npm:lodash:20180130':
+    - semantic-release > @semantic-release/commit-analyzer > conventional-changelog > lodash:
+        patched: '2022-02-11T12:28:42.810Z'
+  'npm:tunnel-agent:20170305':
+    - coveralls > request > tunnel-agent:
+        patched: '2022-02-11T12:28:42.810Z'
+    - semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > tunnel-agent:
+        patched: '2022-02-11T12:28:42.810Z'
