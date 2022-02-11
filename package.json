@@ -77,19 +77,22 @@
     "test:jest-lite": "lerna exec --scope app --stream -- yarn run test jest-lite --watch --coverage",
     "chromatic": "lerna run chromatic --scope=@codesandbox/components --stream",
     "typecheck": "lerna run typecheck",
-    "prettify": "prettier -w ."
+    "prettify": "prettier -w .",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
-    "opencollective": "^1.0.3"
+    "opencollective": "^1.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
-    "all-contributors-cli": "^6.9.2",
+    "all-contributors-cli": "^6.14.0",
     "babel-eslint": "10.0.2",
-    "concurrently": "^4.1.0",
+    "concurrently": "^6.0.0",
     "cross-env": "^6.0.0",
-    "eslint": "5.16.0",
+    "eslint": "7.16.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-import-resolver-webpack": "^0.8.1",
@@ -98,11 +101,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "~7.21.2",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "gulp": "^3.9.1",
-    "husky": "^4.3.0",
-    "lerna": "^3.16.4",
+    "gulp": "^4.0.0",
+    "husky": "^4.3.7",
+    "lerna": "^4.0.0",
     "lint-staged": "10.5.4",
-    "overmind-devtools": "^26.0.2",
+    "overmind-devtools": "^29.0.0",
     "prettier": "2.1.1",
     "pretty-quick": "^3.0.0",
     "typescript": "4.0.3",
@@ -129,5 +132,6 @@
     "type": "opencollective",
     "url": "https://opencollective.com/codesandbox",
     "logo": "https://opencollective.com/codesandbox/logo.txt"
-  }
+  },
+  "snyk": true
 }
